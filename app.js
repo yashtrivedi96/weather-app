@@ -3,7 +3,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-
+const port = process.env.PORT || 80
 
 app.get('', (req, res) => {
     res.send("home page")
@@ -43,6 +43,6 @@ app.get('/weather', (req, res) => {
 })
 
 
-app.listen(80, () => {
-    console.log("Running on port 80")
+app.listen(port, () => {
+    console.log("Running on port " + 80)
 })
